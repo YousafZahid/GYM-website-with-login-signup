@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GYM</title>
+    </head>
+    {% if user.is_authenticated %}
+    <body>
+        <h1>Home aa gya!!</h1>
+    </body>
+    {% else %}
+        {% url 'login_page' as login_url %}
+        {% redirect login_url%}
+    {% endif %}
+</html>
+    
